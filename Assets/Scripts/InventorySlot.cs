@@ -68,7 +68,7 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (transform.childCount > 1)
+        if (transform.childCount > 0)
             return; // Slot already filled
 
         DraggableItem draggable = eventData.pointerDrag.GetComponent<DraggableItem>();
